@@ -1,0 +1,19 @@
+{
+    "name": "sassou69/tracker-candidatures",
+    "description": "C'est une application web qui permet à un utilisateur connecté de suivre ses candidatures à des offres d'emploi.",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Sassou69\\TrackerCandidatures\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "sassou69",
+            "email": "sabahformapro@hotmail.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.10"
+    }
+}

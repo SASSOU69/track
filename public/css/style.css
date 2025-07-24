@@ -1,0 +1,286 @@
+/* === PERSONNALISATION GÉNÉRALE === */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Police principale */
+  background-color: #f5f7fa; /* Couleur de fond claire */
+  color: #333; /* Couleur du texte principale */
+  padding-bottom: 50px; /* Espace en bas de la page */
+}
+
+html,
+body {
+  height: 100%; /* Assure que le contenu occupe toute la hauteur de la page */
+}
+
+body {
+  display: flex;
+  flex-direction: column; /* Structure verticale (pour que le footer reste en bas) */
+}
+
+main {
+  flex: 1; /* Prend tout l’espace disponible entre le header et le footer */
+}
+
+h1,
+h2 {
+  color: #1e3a8a; /* Couleur bleue foncée pour les titres */
+}
+
+/* === NAVIGATION === */
+nav {
+  background-color: #1e3a8a; /* Fond bleu foncé */
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between; /* Espacement entre logo et liens */
+  align-items: center;
+}
+
+nav ul {
+  list-style: none; /* Retire les puces */
+  display: flex;
+  gap: 2rem; /* Espacement entre les liens */
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: white; /* Liens en blanc */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s; /* Transition douce au survol */
+}
+
+nav a:hover {
+  color: #cbd5e1; /* Couleur au survol des liens */
+}
+
+.logout-btn {
+  background-color: #dc2626; /* Rouge vif */
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  color: white !important; /* S'assure que le texte est blanc */
+}
+
+.logout-btn:hover {
+  background-color: #b91c1c; /* Rouge plus foncé au survol */
+}
+
+/* === ACCUEIL === */
+.accueil-content {
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 600px; /* Limite la largeur du contenu */
+}
+
+.accueil-content img {
+  max-width: 150px;
+  margin-bottom: 1.5rem;
+  border-radius: 12px; /* Coins arrondis */
+}
+
+.accueil-content h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.accueil-content p {
+  font-size: 1.125rem;
+  color: #444;
+}
+
+.compteur {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+.btn-start {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #1e3a8a;
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-start:hover {
+  background-color: #274bcc;
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.15);
+  transform: translateY(-2px); /* Légère élévation au survol */
+}
+
+/* === FEATURES === */
+.features {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Ombre légère */
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.features li {
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+
+.features li::before {
+  content: "✔️"; /* Ajoute une coche */
+  position: absolute;
+  left: 0;
+}
+
+/* === TABLE CANDIDATURES === */
+.badge.bg-warning.text-dark {
+  color: #000 !important; /* Forcer le texte noir sur fond jaune */
+}
+
+/* === STATUT PERSONNALISÉS (si besoin plus tard) === */
+.statut {
+  padding: 0.4rem 0.7rem;
+  border-radius: 6px;
+  font-weight: bold;
+  color: white;
+  display: inline-block;
+  font-size: 0.9rem;
+}
+
+/* === FORMULAIRES === */
+.form-candidature {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.form-candidature label {
+  font-weight: bold;
+  color: #1e3a8a;
+  margin-bottom: 0.5rem;
+}
+
+.form-candidature input[type="text"],
+.form-candidature input[type="date"],
+.form-candidature input[type="file"],
+.form-candidature select {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-candidature input:focus,
+.form-candidature select:focus {
+  border-color: #1e3a8a;
+  outline: none;
+}
+
+.table a {
+  text-decoration: none; /* Retire soulignement des liens dans tableau */
+  color: #0d6efd; /* Couleur bleue Bootstrap */
+}
+
+.table a:hover {
+  text-decoration: underline;
+}
+
+/* Boutons du formulaire */
+.btn-submit,
+.btn-reset {
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-submit {
+  background-color: #1e3a8a;
+  color: white;
+}
+
+.btn-submit:hover {
+  background-color: #274bcc;
+  transform: translateY(-2px);
+}
+
+.btn-reset {
+  background-color: #ef4444;
+  color: white;
+}
+
+.btn-reset:hover {
+  background-color: #dc2626;
+}
+
+/* === ALERTS / MESSAGES === */
+.flash-success,
+.alert {
+  max-width: 600px;
+  margin: 1rem auto;
+}
+
+.flash-success {
+  background-color: #d1fae5;
+  color: #065f46;
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid #10b981;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* === RESPONSIVE NAVIGATION === */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .accueil-content img {
+    max-width: 100px;
+  }
+
+  .features {
+    padding: 1rem;
+  }
+
+  .features li {
+    font-size: 1rem;
+  }
+}
+
+/* === PAGE DASHBOARD === */
+.chart-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#statutChart {
+  max-height: 300px;
+  height: 300px;
+  width: 100% !important;
+}
+
